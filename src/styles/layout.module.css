@@ -2,3 +2,44 @@
     width: 85%;
     margin: 0 auto;
 }
+
+/*  Element for a gradient border  */
+.borderWrapper {
+    width: 641px;
+    height: 87px;
+    padding: 1rem;
+    border-radius: 3rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, 9.87972542643547%, rgba(218, 33, 93, 1) 19.75945085287094%, 59.87972542643547%, rgba(0, 0, 0, 1) 100%);
+    padding: 0.2rem;
+}
+
+/* Navigation style */
+.navigation {
+    padding: 1.9rem;
+    padding-bottom: 2.4rem;
+    border-radius: 3rem;
+    align-content: center;
+    background-color: var(--three);
+}
+.navigationList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    list-style: none;
+
+        li {
+            margin-left: 1.5rem;
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+}
+
+li#home {
+    margin-right: 2rem;
+
+}
