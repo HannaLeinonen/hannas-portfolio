@@ -6,7 +6,7 @@ require('dotenv').config()
 
 module.exports = {
     siteMetadata: {
-        title: `Hannas Portfolio`,
+        title: `Hanna Leinonen`,
         siteUrl: `https://www.yourdomain.tld`
     },
     plugins: [

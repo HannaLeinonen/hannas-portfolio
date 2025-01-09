@@ -1,5 +1,7 @@
 import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 
 const IndexPage = () => {
     const data = useStaticQuery(graphql`
@@ -7,37 +9,26 @@ const IndexPage = () => {
             allContentfulPortfolioItem {
                 nodes {
                     title
-                    id
-                    images {
-                        title
-                        description
-                    }
-                    description {
-                        childMarkdownRemark {
-                            excerpt
-                        }
-                    }
+                    slug
                 }
             }
         }
     `)
-    const portfolioItems = data.allContentfulPortfolioItem.nodes
-
+const projects = data.allContentfulPortfolioItem.nodes;
     return (
-        <main>
-            <div className="blob"></div>
+        <Layout>
+            <h1>Homepage</h1>
             <ul>
-                {portfolioItems.map((item) => (
-                    <li key={item.id}>
-                        <h1>{item.title}</h1>
+                {projects.map((project) => (
+                    <li key={project.slug}>
+                        <Link to={`/portfolio/${project.slug}`}>{project.title}</Link>
                     </li>
                 ))}
-
             </ul>
-        </main>
+        </Layout>
     )
 }
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <Seo title="Home"></Seo>
