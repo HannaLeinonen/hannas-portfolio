@@ -1,47 +1,35 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
- */
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
+
+
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    /*Declare the colors on the website with variables */
+    --one: #DA215D;
+
+    --two: #5B0E27;
+
+    --three: #181818;
+
+    font-family: "Noto Sans", serif;
+
+}
 
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #181818;
+    background-color: var(--three);
     color: white;
 }
 
 
-.blob {
-    position: absolute;
-    width: 400px;
-    height: 450px;
 
-    opacity: 0.7;
-    filter: blur(40px);
-    z-index: -1;
 
-    background: radial-gradient(
-        #5B0E27 0%,
-        9.87972542643547%,
-        #DA215D 19.75945085287094%,
-        59.87972542643547%,
-        #000000 100%
-    );
-    border-radius: 94% 41% 10% 67% / 67% 37% 56% 34%;
-    animation: moveBlob 15s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite alternate;
-}
 
-/* Rörelse från höger nedre till vänster övre */
-@keyframes moveBlob {
-    100% {
-        transform: translate(-55%, -25%);
-        border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
-    }
 
-    0% {
-        transform: translate(450%, 150%);
-        border-radius: 100% 75% 92% 74% / 60% 80% 20% 70%;
-    }
-}
+/* Homepage styling */

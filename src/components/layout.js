@@ -1,16 +1,16 @@
 import * as React from 'react'
-/* import { Link } from 'gatsby' */
+import Header from './header'
 import { container } from "../styles/layout.module.css"
 
 const Layout = ({ children }) => {
     return (
         <div className={container}>
-            <header></header>
+
+            <Header></Header>
             <main>
-                <div className="blob"></div>
+
                 {children}
             </main>
-            <footer></footer>
         </div>
     )
 }
