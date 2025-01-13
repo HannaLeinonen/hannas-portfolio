@@ -1,23 +1,16 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-/* import { graphql, useStaticQuery, Link } from 'gatsby' */
+import { heading, blob } from "../styles/main.module.css"
 
 const IndexPage = () => {
-    /* const data = useStaticQuery(graphql`
-        query {
-            allContentfulPortfolioItem {
-                nodes {
-                    title
-                    slug
-                }
-            }
-        }
-    `) */
-/* const projects = data.allContentfulPortfolioItem.nodes; */
     return (
         <Layout>
-            <h1>Homepage</h1>
+            <div className={blob}></div>
+            <div className={heading}>
+            <h1>Hanna <span>Leinonen</span></h1>
+            <h2>Web developer</h2>
+            </div>
 
         </Layout>
     )
