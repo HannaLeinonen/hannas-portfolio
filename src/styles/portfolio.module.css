@@ -1,0 +1,38 @@
+.heading {
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+
+    text-align: center;
+}
+.divider {
+    width: 100%;
+    height: 0.3vh;
+    margin-top: 1rem;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, 9.87972542643547%, rgba(218, 33, 93, 1) 19.75945085287094%, 59.87972542643547%, rgba(0, 0, 0, 1) 100%);;
+}
+.portfolioItems {
+    width: 95%;
+    margin: 15vh auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    a:hover {
+        color: rgb(170, 166, 166);
+        transition: 0.3s;
+    }
+}
+.portfolioItem {
+width: max-content;
+margin: 2rem 4rem 2rem 4rem;
+}
+
+.imageWrapper {
+    margin-top: 3rem;
+    border-radius: 10px;
+}
