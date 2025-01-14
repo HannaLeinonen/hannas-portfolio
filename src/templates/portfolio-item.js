@@ -4,16 +4,16 @@ import Layout from '../components/layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const PortfolioItemTemplate = ({ data }) => {
-    const { title, image, images } = data.contentfulPortfolioItem
-    const gatsbyImage = getImage(image)
+    const { title, images } = data.contentfulPortfolioItem
+    /* const gatsbyImage = getImage(image) */
 
     return (
         <Layout>
             <h1>{title}</h1>
-            <GatsbyImage
+            {/* <GatsbyImage
                 image={gatsbyImage}
                 alt="Hur löser vi detta?"
-            ></GatsbyImage>
+            ></GatsbyImage> */}
 
             <div className='imageGallery'>
                 {images.map((img, index) => {
