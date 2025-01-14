@@ -6,7 +6,8 @@ import {
     borderWrapper,
     home,
     homeTitle,
-    homeIcon
+    homeIcon,
+    active
 } from '../styles/layout.module.css'
 
 const Navigation = () => {
@@ -32,13 +33,13 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/portfolio">Portfolio</Link>
+                        <Link activeClassName={active} to="/portfolio">Portfolio</Link>
                     </li>
                     <li>
-                        <Link to="/about-me">About me</Link>
+                        <Link activeClassName={active} to="/about-me">About me</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link activeClassName={active} to="/contact">Contact</Link>
                     </li>
                 </ul>
             </nav>
