@@ -1,3 +1,4 @@
+
 .container {
     width: 85%;
     height: 100%;
@@ -65,6 +66,11 @@ header {
 
 }
 
+
+
+
+
+/*  Media queries */
 @media (max-width: 768px) {
     .borderWrapper {
         width: 100%;
