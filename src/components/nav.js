@@ -17,7 +17,7 @@ const Navigation = () => {
         <div className={borderWrapper}>
             <nav className={navigation}>
                 <ul className={navigationList}>
-                    <li className={home}>
+                    <li className={`navLink, ${home}`}>
                         <Link to="/">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -32,13 +32,13 @@ const Navigation = () => {
                             <span className={homeTitle}>Home</span>
                         </Link>
                     </li>
-                    <li>
+                    <li className='navLink'>
                         <Link activeClassName={active} to="/portfolio">Portfolio</Link>
                     </li>
-                    <li>
+                    <li className='navLink'>
                         <Link activeClassName={active} to="/about-me">About me</Link>
                     </li>
-                    <li>
+                    <li className='navLink'>
                         <Link activeClassName={active} to="/contact">Contact</Link>
                     </li>
                 </ul>
