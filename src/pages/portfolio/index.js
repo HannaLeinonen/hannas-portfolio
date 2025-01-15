@@ -14,8 +14,9 @@ const PortfolioPage = () => {
                     image {
                         gatsbyImage(
                             layout: CONSTRAINED,
-                            width: 330,
-                            height: 700
+                            width: 175,
+                            height: 378,
+                            placeholder: BLURRED
                             )
                     }
                 }

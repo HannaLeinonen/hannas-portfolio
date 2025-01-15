@@ -1,13 +1,19 @@
+/* Style for porfolio index.js */
 .heading {
     margin-top: 15vh;
     margin-bottom: 5vh;
 
     text-align: center;
+
+    h3 {
+        font-size: 3em;
+    }
 }
 .divider {
     width: 100%;
     height: 0.3vh;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, 9.87972542643547%, rgba(218, 33, 93, 1) 19.75945085287094%, 59.87972542643547%, rgba(0, 0, 0, 1) 100%);;
 }
@@ -32,7 +38,71 @@ width: max-content;
 margin: 2rem 4rem 2rem 4rem;
 }
 
+
+
+
+/* Style for porfolio portfolio-item.js */
+
+.container {
+    width: 90%;
+    margin: 10vh auto;
+
+}
+
+
+.contentContainer{
+    width: 80%;
+    margin: 7vh auto;
+    display: flex;
+    justify-content: space-between;
+}
+.projectContent {
+    width: 70%;
+    h2 {
+        text-align: center;
+
+    }
+    p {
+        margin: 2vh auto;
+        
+    }
+}
+.techContainer {
+    width: 40%;
+    margin: 5vh auto;
+
+    ul {
+        margin-top: 1.5rem;
+        list-style-type: none; /* Ta bort standardlist-stilen */
+
+        li{
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--one);
+
+        }
+
+    }
+
+}
 .imageWrapper {
     margin-top: 3rem;
     border-radius: 10px;
+    margin: 1rem;
+}
+.imageGallery{
+    width: 55%;
+    margin: 5vh auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    h3{
+        display: block;
+
+    }
 }

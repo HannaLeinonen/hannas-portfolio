@@ -2,26 +2,76 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
+import {
+    container,
+    imageGallery,
+    heading,
+    divider,
+    contentContainer,
+    imageWrapper,
+    projectContent,
+    techContainer
+} from '../styles/portfolio.module.css'
 const PortfolioItemTemplate = ({ data }) => {
-    const { title, images } = data.contentfulPortfolioItem
-    /* const gatsbyImage = getImage(image) */
+    const { title, description, images, image, technologies } =
+        data.contentfulPortfolioItem
+    const gatsbyImage = getImage(image)
 
     return (
         <Layout>
-            <h1>{title}</h1>
-            {/* <GatsbyImage
-                image={gatsbyImage}
-                alt="Hur löser vi detta?"
-            ></GatsbyImage> */}
+            <div className={container}>
+                <h1 className={heading}>Project page</h1>
+                <div className={divider}></div>
 
-            <div className='imageGallery'>
-                {images.map((img, index) => {
-                    const gatsbyImage = getImage(img);
-                    return (
-                        <GatsbyImage key={index} image={gatsbyImage} alt={`additional image ${index + 1} for ${title}`}/>
-                    )
-                })}
+                <section className={contentContainer}>
+                    <aside>
+                        <GatsbyImage
+                            image={gatsbyImage}
+                            alt={image.title}
+                        ></GatsbyImage>
+                    </aside>
+                    <article className={projectContent}>
+                        <h2 >{title}</h2>
+                        <p >{description.description}</p>
+
+                        {/* Technologies list */}
+                        {technologies && technologies.length > 0 && (
+                            <div className={techContainer}>
+                                <h3>Technologies: </h3>
+                                <ul>
+                                    {technologies.map((tech, techIndex) => (
+                                        <li key={techIndex}>{tech}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </article>
+                </section>
+
+                {/* Gallery content */}
+                <h3 className={heading}>Gallery</h3>
+                <div className={divider}></div>
+                <section className={imageGallery}>
+                    {images.map((img, index) => {
+                        const gatsbyImage = getImage(img)
+                        return (
+                            <a
+                                href={img.publicUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                key={index}
+                            >
+                                <GatsbyImage
+                                    image={gatsbyImage}
+                                    className={imageWrapper}
+                                    alt={`additional image ${
+                                        index + 1
+                                    } for ${title}`}
+                                />
+                            </a>
+                        )
+                    })}
+                </section>
             </div>
         </Layout>
     )
@@ -33,18 +83,20 @@ export const query = graphql`
     query ($slug: String!) {
         contentfulPortfolioItem(slug: { eq: $slug }) {
             title
+            technologies
+            description {
+                description
+            }
             image {
-                gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 200
-                )
+                gatsbyImageData(layout: CONSTRAINED, width: 200, placeholder: BLURRED)
+                title
+                publicUrl
             }
             images {
-                gatsbyImageData(
-                    layout: CONSTRAINED
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                title
+                publicUrl
 
-                    width: 200
-                )
             }
         }
     }
