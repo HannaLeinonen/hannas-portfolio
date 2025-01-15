@@ -26,10 +26,20 @@ body {
     background-color: var(--three);
     color: white;
 }
-
-
-
-
-
-
-/* Homepage styling */
+h1 {
+    font-size: 4.2em;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 2em;
+}
+h1, h2, h3, h4 {
+    font-family: 'Poiret One', serif;
+    font-weight: 100;
+}
+.navLink {
+    font-family: 'Poiret One', serif;
+    font-weight: 200;
+}
