@@ -15,7 +15,7 @@
     --three: #181818;
 
     font-family: "Noto Sans", serif;
-
+    font-weight: 200;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: var(--three);
-    color: white;
+    color: #ffffff;
 }
 h1 {
     font-size: 4.2em;
@@ -35,10 +35,16 @@ h2 {
 h3 {
     font-size: 2em;
 }
-h1, h2, h3, h4 {
+h4 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+h1, h2, h3 {
     font-family: 'Poiret One', serif;
     font-weight: 100;
 }
+
+
 .navLink {
     font-family: 'Poiret One', serif;
     font-weight: 200;
