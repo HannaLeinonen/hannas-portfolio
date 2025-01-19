@@ -15,6 +15,6 @@ const Layout = ({ children }) => {
     )
 }
 
-export const Head = () => <title>Home Page</title>
+
 
 export default Layout

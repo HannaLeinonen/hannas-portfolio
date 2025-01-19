@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import {
     aboutMeContainer,
+    resumePicture,
     myImage,
     aboutMeContent,
     resumeContent,
@@ -14,6 +15,7 @@ import {
     courses
 } from '../styles/about-me.module.css'
 import { divider } from '../styles/portfolio.module.css'
+import Seo from './seo'
 const AboutPage = ({ title, description, content }) => {
     const data = useStaticQuery(graphql`
         query {
@@ -30,15 +32,15 @@ const AboutPage = ({ title, description, content }) => {
 
     return (
         <Layout>
+            <Seo title={title}></Seo>
             <div className={aboutMeContainer}>
                 <h1>{title}</h1>
-                {/* <div className={divider}></div> */}
                 <section className={aboutMeContent}>
                     <article>
                         <p>{description}</p>
                         <p>{content.content}</p>
                     </article>
-                    <div className="resumePicture">
+                    <div className={resumePicture}>
                         <StaticImage
                             src="../images/Image.jpg"
                             alt="Description of the image"

@@ -64,7 +64,7 @@ margin: 2rem 4rem 2rem 4rem;
     }
     p {
         margin: 2vh auto;
-        
+
     }
 }
 .techContainer {
@@ -104,5 +104,35 @@ margin: 2rem 4rem 2rem 4rem;
     h3{
         display: block;
 
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3em;
+    }
+    .portfolioItem {
+        margin: 3vh auto;
+    }
+
+    .contentContainer {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .projectContent {
+        width: 100%;
+        margin-top: 10vh;
+    }
+    .techContainer {
+        width: 100%;
+    }
+    .imageGallery{
+        width: 100%;
+
+        a{
+            margin: 0 auto;
+        }
     }
 }

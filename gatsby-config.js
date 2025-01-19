@@ -7,7 +7,8 @@ require('dotenv').config()
 module.exports = {
     siteMetadata: {
         title: `Hanna Leinonen`,
-        siteUrl: `https://www.yourdomain.tld`
+        siteUrl: `https://www.yourdomain.tld`,
+        description:`Hannas portfolio website. Junior frontend developer.`
     },
     plugins: [
         'gatsby-transformer-remark',

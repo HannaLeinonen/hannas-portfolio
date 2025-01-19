@@ -12,6 +12,7 @@ import {
     projectContent,
     techContainer
 } from '../styles/portfolio.module.css'
+import Seo from '../components/seo'
 const PortfolioItemTemplate = ({ data }) => {
     const { title, description, images, image, technologies } =
         data.contentfulPortfolioItem
@@ -19,8 +20,9 @@ const PortfolioItemTemplate = ({ data }) => {
 
     return (
         <Layout>
+            <Seo title={title}></Seo>
             <div className={container}>
-                <h1 className={heading}>Project page</h1>
+                <h1 className={heading}>{title}</h1>
                 <div className={divider}></div>
 
                 <section className={contentContainer}>
@@ -28,10 +30,11 @@ const PortfolioItemTemplate = ({ data }) => {
                         <GatsbyImage
                             image={gatsbyImage}
                             alt={image.title}
+                            className={imageWrapper}
                         ></GatsbyImage>
                     </aside>
                     <article className={projectContent}>
-                        <h2 >{title}</h2>
+
                         <p >{description.description}</p>
 
                         {/* Technologies list */}
@@ -78,6 +81,8 @@ const PortfolioItemTemplate = ({ data }) => {
 }
 
 export default PortfolioItemTemplate
+
+
 
 export const query = graphql`
     query ($slug: String!) {

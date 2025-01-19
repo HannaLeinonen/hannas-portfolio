@@ -49,3 +49,61 @@ h1, h2, h3 {
     font-family: 'Poiret One', serif;
     font-weight: 200;
 }
+
+/* Thank you page style */
+.container {
+    width: 100%;
+    text-align: center;
+
+    h3 {
+        margin-top: 10vh;
+    }
+}
+.heading {
+    margin-top: 20vh;
+}
+
+/* 404 page style */
+.headingStyles {
+    text-align: center;
+    margin-top: 20vh;
+    font-family: 'Limelight', serif;
+
+    background: linear-gradient(var(--three), var(--one), var(--three));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+}
+
+.textStyle {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.homeLink {
+    margin-top: 10vh;
+    color: white;
+    font-family: 'Poiret One', serif;
+    font-weight: 200;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        h3 {
+            font-size: 1.7em;
+        }
+    }
+    .heading{
+        margin-top: 10vh;
+        font-size: 3em;
+    }
+
+    .headingStyles {
+        font-size: 3em;
+    }
+    .textStyle {
+        font-size: 1.5em;
+    }
+}

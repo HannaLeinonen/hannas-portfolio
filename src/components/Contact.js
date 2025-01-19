@@ -6,6 +6,7 @@ import {
     contactContainer,
     contactInfo
 } from '../styles/contact.module.css'
+import Seo from './seo'
 
 const ContactPage = ({ title, description }) => {
     const handleSubmit = (e) => {
@@ -32,6 +33,7 @@ const ContactPage = ({ title, description }) => {
     }
     return (
         <Layout>
+            <Seo title={title}></Seo>
             <div className={contactContainer}>
                 <h1>{title}</h1>
                 <h3>{description}</h3>
@@ -122,6 +124,7 @@ const ContactPage = ({ title, description }) => {
                                 id="name"
                                 name="name"
                                 placeholder="Your name"
+                                autocomplete="on"
                             />
                         </div>
 
@@ -132,6 +135,7 @@ const ContactPage = ({ title, description }) => {
                                 id="email"
                                 name="email"
                                 placeholder="Your e-mail"
+                                autocomplete="off"
                                 required
                             />
                         </div>
